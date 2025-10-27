@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!-- 語言設定為繁體中文 -->
+<html lang="zh-Hant" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工具盒首頁</title>
+    <!-- 1. 載入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        // Tailwind CSS 設定
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+            darkMode: 'class', // 啟用暗色模式
+        }
+    </script>
+    <style>
+        /* 增加一點過渡效果 */
+        .tool-card {
+            transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+        }
+        .tool-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .dark .tool-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-100 dark:bg-gray-900 min-h-screen flex items-center justify-center p-4">
+
+    <!-- 主要 UI 卡片 -->
+    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-6 sm:p-10 w-full max-w-lg">
+        
+        <header class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800 dark:text-white">
+                工具盒首頁
+            </h1>
+            <p class="text-gray-600 dark:text-gray-400 mt-2">
+                歡迎使用！請選擇您需要的工具類別。
+            </p>
+        </header>
+
+        <main>
+            <!-- 工具連結列表 -->
+            <div class="space-y-4">
+            
+                <!-- 卡片 1: PDF 工具箱 -->
+                <a href="pdf.html" 
+                   class="tool-card flex items-center p-5 bg-gray-50 dark:bg-gray-700 rounded-lg shadow-sm border border-gray-200 dark:border-gray-600 dark:hover:bg-gray-600 hover:bg-gray-100">
+                    <!-- 圖示 -->
+                    <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center bg-blue-100 dark:bg-blue-900 rounded-lg text-blue-600 dark:text-blue-300">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 002-2V7m-4 13H9m-4-8h4m4-4h4m4 4h4M9 16H5m14-4V7M9 7h4" /></svg>
+                    </div>
+                    <div class="ml-4">
+                        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">PDF 工具箱</h2>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">分割、旋轉或編輯 PDF 的 Metadata。</p>
+                    </div>
+                </a>
+
+                <!-- 卡片 2: 工具箱 (範例) -->
+                <a href="#" 
+                   class="tool-card flex items-center p-5 bg-gray-50 dark:bg-gray-700 rounded-lg shadow-sm border border-gray-200 dark:border-gray-600 dark:hover:bg-gray-600 hover:bg-gray-100 opacity-60 cursor-not-allowed">
+                    <!-- 圖示 -->
+                    <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center bg-gray-100 dark:bg-gray-600 rounded-lg text-gray-600 dark:text-gray-400">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l-1.586-1.586a2 2 0 010-2.828L16 8M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l-1.586-1.586a2 2 0 010-2.828L16 8m-6 8h.01M4 20h16a2 2 0 002-2V6a2 2 0 00-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                    </div>
+                    <div class="ml-4">
+                        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">工具箱2 (即將推出)</h2>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">功能：敬請期待</p>
+                    </div>
+                </a>
+
+            </div>
+        </main>
+        
+        <footer class="text-center mt-8">
+             <p class="text-xs text-gray-500 dark:text-gray-400">
+                Jen HUANG
+             </p>
+             <p class="text-xs text-gray-500 dark:text-gray-400 mt-2">
+                <a href="https://github.com/jenhuang-tw/shared-tools" class="hover:underline hover:text-blue-500 dark:hover:text-blue-400">
+                    在 GitHub 上查看原始碼
+                </a>
+             </p>
+        </footer>
+    </div>
+
+</body>
+</html>
